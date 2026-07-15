@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu, Ubuntu_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "./_components/Footer";
 
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
@@ -30,7 +31,10 @@ export default function RootLayout({
       lang="en"
       className={`${ubuntu.variable} ${ubuntuMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
