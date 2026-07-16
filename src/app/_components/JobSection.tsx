@@ -20,9 +20,9 @@ export default function JobSection({
   technologies,
 }: JobSectionProps) {
   return (
-    <section id={id} className="py-16">
+    <div id={id} className="w-full py-16 xl:w-1/2">
       <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-        <h2 className="text-2xl font-medium">{role}</h2>
+        <h2>{role}</h2>
         <p className="text-sm text-zinc-500 dark:text-zinc-400">{period}</p>
       </div>
       <p className="mt-1 text-lg text-zinc-600 dark:text-zinc-400">
@@ -60,6 +60,6 @@ export default function JobSection({
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 }
