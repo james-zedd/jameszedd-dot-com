@@ -58,17 +58,22 @@ function CredentialList({ items }: { items: CredentialItem[] }) {
 export default function Achievements() {
   return (
     <section id="achievements" className="py-16">
-      <h2 className="text-2xl font-medium">Certifications &amp; Achievements</h2>
+      <h1 className="text-2xl font-medium">Certifications &amp; Achievements</h1>
 
-      <h3 className="mt-8 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-        Certifications
-      </h3>
-      <CredentialList items={certifications} />
-
-      <h3 className="mt-8 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-        Achievements
-      </h3>
-      <CredentialList items={achievements} />
+      <div className="flex flex-col gap-6 sm:flex-row sm:gap-12">
+        <div className="w-full md:w-1/2">
+          <h3 className="mt-8 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+            Certifications
+          </h3>
+          <CredentialList items={certifications} />
+        </div>
+        <div className="w-full md:w-1/2">
+          <h3 className="mt-8 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+            Achievements
+          </h3>
+          <CredentialList items={achievements} />
+        </div>
+      </div>
     </section>
   );
 }

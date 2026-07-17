@@ -49,7 +49,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <section id="portfolio" className="py-16">
-      <h2 className="text-2xl font-medium">Portfolio Projects</h2>
+      <h1 className="text-2xl font-medium">Portfolio Projects</h1>
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         {projects.map((project) => (
           <PortfolioCard key={project.name} {...project} />
