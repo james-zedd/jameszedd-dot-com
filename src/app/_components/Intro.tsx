@@ -10,15 +10,17 @@ export default function Intro() {
             Front-End Engineer with 6+ years building production-ready React and TypeScript applications. Also experienced with React Native, Expo, leading development independently, reporting directly to senior stakeholders, and owning products from architecture to App Store release.
           </h2>
         </div>
-        <div className="flex flex-column w-full justify-center align-center overflow-hidden">
-          <Image
-            src="/images/lasagne-photo__1080x1081.jpg"
-            // src="/images/james_zedd__iaido.jpg"
-            alt="James Zedd"
-            width={1000}
-            height={1000}
-            className="rounded-full p-6 mx-auto w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px]"
-          />
+        <div className="flex flex-column w-full justify-center align-center">
+          <div className="mx-auto w-full rounded-full overflow-hidden max-w-[300px] md:max-w-[400px] lg:max-w-[500px]">
+            <Image
+              src="/images/lasagne-photo__732x732.jpg"
+              // src="/images/james_zedd__iaido.jpg"
+              alt="James Zedd"
+              width={1000}
+              height={1000}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
