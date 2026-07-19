@@ -30,8 +30,8 @@
   --animate-toggle-blink: toggle-blink 800ms infinite steps(2);
 
   @keyframes toggle-blink {
-    0%, 100% { display: inline-block; }
-    50% { display: none; }
+    0%, 100% { visibility: visible; }
+    50% { visibility: hidden; }
   }
 }
 

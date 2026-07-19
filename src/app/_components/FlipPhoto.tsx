@@ -23,7 +23,7 @@ export default function FlipPhoto({
   }
 
   return (
-    <div className="mx-auto w-full max-w-[300px] [perspective:1200px] md:max-w-[400px] lg:max-w-[500px]">
+    <div className="mx-auto w-full max-w-[250px] [perspective:1200px] md:max-w-[400px] lg:max-w-[500px]">
       <div
         id="intro-photo"
         className="relative aspect-square w-full transform-3d transition-transform duration-700 ease-in-out cursor-pointer"
