@@ -26,6 +26,13 @@
   --breakpoint-xl: 80rem; /* 1280px */
   --breakpoint-2xl: 96rem; /* 1536px */
   --breakpoint-3xl: 120rem; /* 1920px */
+
+  --animate-toggle-blink: toggle-blink 800ms infinite steps(2);
+
+  @keyframes toggle-blink {
+    0%, 100% { display: inline-block; }
+    50% { display: none; }
+  }
 }
 
 body {
