@@ -14,6 +14,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-ubuntu);
   --font-mono: var(--font-ubuntu-mono);
+  --font-serif: var(--font-merriweather);
 }
 
 /* Breakpoints for sm:, md:, lg:, xl:, 2xl: variants.

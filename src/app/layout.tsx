@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Ubuntu, Ubuntu_Mono } from "next/font/google";
+import { Ubuntu, Ubuntu_Mono, Merriweather } from "next/font/google";
 import "./globals.css";
 import Footer from "./_components/Footer";
 
@@ -12,6 +12,12 @@ const ubuntu = Ubuntu({
 const ubuntuMono = Ubuntu_Mono({
   variable: "--font-ubuntu-mono",
   weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
+const merriweather = Merriweather({
+  variable: "--font-merriweather",
+  weight: ["300", "400", "600"],
   subsets: ["latin"],
 });
 
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${ubuntu.variable} ${ubuntuMono.variable} h-full antialiased`}
+      className={`${ubuntu.variable} ${ubuntuMono.variable} ${merriweather.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         {children}
