@@ -2,16 +2,20 @@ type PortfolioCardProps = {
   name: string;
   description: string;
   technologies: string[];
-  githubLink?: string;
-  webLink?: string;
+  linkOneUrl?: string;
+  linkTwoUrl?: string;
+  linkOneText?: string;
+  linkTwoText?: string;
 };
 
 export default function PortfolioCard({
   name,
   description,
   technologies,
-  githubLink,
-  webLink,
+  linkOneUrl,
+  linkTwoUrl,
+  linkOneText = "View on GitHub",
+  linkTwoText = "View in Browser",
 }: PortfolioCardProps) {
   return (
     <div className="flex flex-col rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
@@ -29,25 +33,25 @@ export default function PortfolioCard({
           ))}
         </ul>
       </div>
-      <div className="mt-6 flex">
-        {githubLink && (
+      <div className="mt-6 flex gap-3">
+        {linkOneUrl && (
           <a
-            href={githubLink}
+            href={linkOneUrl}
             target="_blank"
             rel="noreferrer"
             className="rounded-md border border-zinc-300 px-3 py-1.5 text-sm text-zinc-700 hover:bg-zinc-200 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
           >
-            View on Github
+            {linkOneText}
           </a>
         )}
-        {webLink && (
+        {linkTwoUrl && (
           <a
-            href={webLink}
+            href={linkTwoUrl}
             target="_blank"
             rel="noreferrer"
             className="ml-auto rounded-md border border-zinc-300 px-3 py-1.5 text-sm text-zinc-700 hover:bg-zinc-200 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
           >
-            View in Browser
+            {linkTwoText}
           </a>
         )}
       </div>

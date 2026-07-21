@@ -44,7 +44,7 @@ export default function IntroTextText({ showTextB = false }: IntroTextProps) {
 
         let cancelled = false;
 
-        typeText(" " + TEXT_B, 50, () => cancelled, (char) =>
+        typeText("\n\n" + TEXT_B, 50, () => cancelled, (char) =>
             setRenderedText((prev) => prev + char)
         );
 
@@ -53,12 +53,18 @@ export default function IntroTextText({ showTextB = false }: IntroTextProps) {
         };
     }, [showTextB, isTextADone]);
 
+  const paragraphs = renderedText.split("\n\n");
+
   return (
-    <div>
-      <h2>
-        {renderedText}
-        <span className="w-2 h-4 md:w-3 md:h-5 bg-white inline-block ml-1 animate-toggle-blink"></span>
-        </h2> 
+    <div className="intro-text">
+      {paragraphs.map((paragraph, i) => (
+        <p key={i}>
+          {paragraph}
+          {i === paragraphs.length - 1 && (
+            <span className="w-2 h-4 md:w-3 md:h-5 bg-white inline-block ml-1 animate-toggle-blink"></span>
+          )}
+        </p>
+      ))}
     </div>
   );
 }

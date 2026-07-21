@@ -47,8 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 h2 {
@@ -70,6 +70,23 @@ p {
   color: var(--text-light);
 }
 
+.intro-text p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.intro-text p + p {
+  margin-top: 1rem;
+}
+
+@media (min-width: 40rem) { /* 640px */
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
 @media (min-width: 48rem) { /* 768px */
   h1 {
     font-size: 4rem;
@@ -89,6 +106,11 @@ p {
   p {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .intro-text p {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
