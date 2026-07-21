@@ -3,6 +3,7 @@ type JobSectionProps = {
   role: string;
   company: string;
   location: string;
+  companyType: string;
   period: string;
   highlights: string[];
   responsibilities: string[];
@@ -14,6 +15,7 @@ export default function JobSection({
   role,
   company,
   location,
+  companyType,
   period,
   highlights,
   responsibilities,
@@ -26,7 +28,7 @@ export default function JobSection({
         <p className="text-sm text-zinc-500 dark:text-zinc-400">{period}</p>
       </div>
       <p className="mt-1 text-lg text-zinc-600 dark:text-zinc-400">
-        {company} · {location}
+        {company} · {location} · {companyType}
       </p>
 
       <h3 className="mt-8 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">

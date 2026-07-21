@@ -38,7 +38,7 @@ export default function QuoteRandomizer({ quotes }: QuoteRandomizerProps) {
             </button>
             <div
                 className={`max-w-lg overflow-y-auto text-center transition-[height] duration-500 ease-in-out lg:text-left ${
-                    currentQuote !== null ? "h-[150px]" : "h-0"
+                    currentQuote !== null ? "h-[200px] lg:h-[150px]" : "h-0"
                 }`}
             >
                 {currentQuote !== null && (

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import FlipPhoto from "./FlipPhoto";
 import IntroText from "./IntroText";
+import { introPhoto } from "@/app/_data/Intro";
 
 export default function Intro() {
   const [hasFlipped, setHasFlipped] = useState(false);
@@ -15,13 +16,7 @@ export default function Intro() {
           <IntroText showTextB={hasFlipped} />
         </div>
         <div className="flex flex-column w-full justify-center align-center">
-          <FlipPhoto
-            frontSrc="/images/lasagne-photo__732x732.jpg"
-            frontAlt="James Zedd Programmer"
-            backSrc="/images/james_zedd__iaido.jpg"
-            backAlt="James Zedd Budoka"
-            onFlip={() => setHasFlipped(true)}
-          />
+          <FlipPhoto {...introPhoto} onFlip={() => setHasFlipped(true)} />
         </div>
       </div>
     </section>

@@ -1,10 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const TEXT_A = "Front-End Engineer with 6+ years building production-ready React and TypeScript applications. Also experienced with React Native, Expo, leading development independently, reporting directly to senior stakeholders, and owning products from architecture to App Store release.";
-
-const TEXT_B = "In addition to my technical skills, I have been a martial arts student for over 17 years, achieving a Fourth Degree Black Belt (Yondan) in Yoshinkan Aikido and a Second Degree Black Belt (Nidan) in Iaido.";
+import { TEXT_A, TEXT_B } from "@/app/_data/Intro";
 
 type IntroTextProps = {
     showTextB?: boolean;
