@@ -1,7 +1,7 @@
 type PortfolioCardProps = {
   name: string;
   description: string;
-  technologies: string;
+  technologies: string[];
   githubLink?: string;
   webLink?: string;
 };
@@ -18,9 +18,16 @@ export default function PortfolioCard({
       <div className="flex-1">
         <h3 className="text-xl font-medium">{name}</h3>
         <p className="mt-1 text-zinc-600 dark:text-zinc-400">{description}</p>
-        <p className="mt-3 text-sm text-zinc-500 dark:text-zinc-400">
-          Technologies Used: {technologies}
-        </p>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          {technologies.map((technology) => (
+            <li
+              key={technology}
+              className="rounded-full border border-zinc-200 px-3 py-1 text-sm text-zinc-700 dark:border-zinc-700 dark:text-zinc-300"
+            >
+              {technology}
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="mt-6 flex">
         {githubLink && (

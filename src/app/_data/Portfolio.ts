@@ -1,53 +1,31 @@
 export type Project = {
     name: string;
     description: string;
-    technologies: string;
+    technologies: string[];
     githubLink?: string;
     webLink?: string;
 };
 
 export const projects: Project[] = [
     {
-        name: "CAFI Student Portal",
+        name: "CAFI Student Portal Administration Application",
         description:
-            "A student resource application built for the Chudokai Aikido Federation International",
-        technologies: "Node JS, Express JS, React JS, Mongo DB, AWS EC2",
-        githubLink: "https://github.com/james-zedd/cafi-student-portal--130245840986",
-        webLink: "https://portal.chudokaiaikidofederationinternational.org/",
+            "An admin panel for the Chudokai Aikido Federation International",
+        technologies: ["next.js", "react.js", "Tailwind CSS", "Vercel", "Typescript"],
+        githubLink: "https://github.com/james-zedd/cafi-student-portal-admin",
+        webLink: "https://admin.chudokaiaikidofederationinternational.org/",
     },
     {
-        name: "House Marketplace Application",
-        description: "React/Firebase app for property listings",
-        technologies: "React JS, Firebase for database and user authentication",
-        githubLink: "https://github.com/james-zedd/housing-marketplace-app-49389250",
-        webLink: "https://housing-marketplace-app-49389250.vercel.app/",
+        name: "CAFI Student Portal Node JS Server",
+        description: "Node JS server for the CAFI Student Portal",
+        technologies: ["Node JS", "Express JS", "MongoDB", "Mongoose"],
+        githubLink: "https://github.com/james-zedd/cafi-student-portal--130245840986",
     },
     {
         name: "Github Finder 2022",
         description: "React App for Finding Github Users",
-        technologies: "React JS, Tailwind CSS, Github API",
+        technologies: ["React JS", "Tailwind CSS", "Github API"],
         githubLink: "https://github.com/james-zedd/github-finder-2022",
         webLink: "https://github-finder-2022-chi.vercel.app/",
-    },
-    {
-        name: "Robyn Zedd Design",
-        description: "Custom Graphic Design Portfolio",
-        technologies: "React JS, Javascript",
-        githubLink: "https://github.com/james-zedd/robyn-zedd-portfolio-6549818961",
-        webLink: "http://robynzedddesign.com/",
-    },
-    {
-        name: "Github Finder",
-        description: "React App for Github",
-        technologies: "React JS, Javascript, GitHub API",
-        githubLink: "https://github.com/james-zedd/github-finder-react",
-        webLink: "https://eager-williams-ee7a0c.netlify.com/",
-    },
-    {
-        name: "Client Panel",
-        description: "Angular/Firebase Application",
-        technologies: "Angular, Angular CLI, Firebase, Typescript",
-        githubLink: "https://github.com/james-zedd/client-panel-0984543",
-        webLink: "https://clientpanelprod-a1012.firebaseapp.com/login",
-    },
+    }
 ];
