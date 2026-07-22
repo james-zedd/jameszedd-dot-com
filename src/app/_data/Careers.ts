@@ -18,9 +18,9 @@ export const tiaJob: Job = {
     highlights: [
         "Owned the TIA Closeout and Warranty app post-handoff, self-directing a fast learning curve in React Native and Expo with no prior experience in either.",
         "Managed ongoing mobile app development, including code updates, Expo SDK upgrades, and uploading production-ready build packages to the Apple App Store and Google Play.",
-        "Engineered high-performance frontend systems with React.js, Next.js, TypeScript, and modern CSS frameworks.",
+        "Engineered high-performance front-end systems with React.js, Next.js, TypeScript, and modern CSS frameworks.",
         "Transformed complex Figma prototypes into fully responsive production code.",
-        "Leveraged Anthropic Claude to accelerate problem-solving, codebase refactoring, and time-to-resolution.",
+        "Leveraged AI workflows using Claude code to accelerate problem-solving, codebase refactoring, and time-to-resolution.",
     ],
     responsibilities: [
         "Maintained a shared SaaS codebase across multiple client Firebase instances, keeping each client's database and build up to date.",
