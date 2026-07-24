@@ -12,7 +12,7 @@ export const projects: Project[] = [
     {
         name: "CAFI Student Portal Mobile Application",
         description: "A mobile application for the CAFI Student Portal. Includes a news feed, questions quiz, technique randomizer, and more.",
-        technologies: ["React Native", "Expo", "TypeScript", "Expo Apple Authentication", "React Native Google Sign In"],
+        technologies: ["React Native", "Expo", "Expo Apple Authentication", "React Native Google Sign In"],
         linkOneUrl: "https://apps.apple.com/us/app/cafi-student-portal/id6760269554",
         linkTwoUrl: "https://play.google.com/store/apps/details?id=com.zeddenterprises.cafistudentportalmobile&hl=en_CA",
         linkOneText: "View on App Store",
