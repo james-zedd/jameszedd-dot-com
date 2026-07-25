@@ -1,3 +1,5 @@
+import type { IconKey } from "@/app/_data/icons";
+
 export type Project = {
     name: string;
     description: string;
@@ -6,6 +8,8 @@ export type Project = {
     linkTwoUrl?: string;
     linkOneText?: string;
     linkTwoText?: string;
+    linkOneIcon?: IconKey;
+    linkTwoIcon?: IconKey;
 };
 
 export const projects: Project[] = [
@@ -15,8 +19,10 @@ export const projects: Project[] = [
         technologies: ["React Native", "Expo", "Expo Apple Authentication", "React Native Google Sign In"],
         linkOneUrl: "https://apps.apple.com/us/app/cafi-student-portal/id6760269554",
         linkTwoUrl: "https://play.google.com/store/apps/details?id=com.zeddenterprises.cafistudentportalmobile&hl=en_CA",
-        linkOneText: "View on App Store",
-        linkTwoText: "View on Google Play",
+        linkOneText: "App Store",
+        linkTwoText: "Google Play",
+        linkOneIcon: "appStore",
+        linkTwoIcon: "googlePlay",
     },
     {
         name: "CAFI Student Portal Administration Application",
