@@ -14,9 +14,15 @@ async function typeText(
     onChar: (char: string) => void
 ) {
     for (const char of text) {
-        await new Promise((resolve) => setTimeout(resolve, delay));
-        if (isCancelled()) return;
-        onChar(char);
+        if (char === "|") {
+            onChar("\n\n");
+            await new Promise((resolve) => setTimeout(resolve, delay * 20));
+            if (isCancelled()) return;
+        } else {
+            await new Promise((resolve) => setTimeout(resolve, delay));
+            if (isCancelled()) return;
+            onChar(char);
+        }
     }
 }
 
