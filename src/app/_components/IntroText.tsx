@@ -1,5 +1,7 @@
 "use client";
 
+const TEXT_DELAY = 20; // Delay in milliseconds between each character
+
 import { useState, useEffect } from "react";
 import { TEXT_A, TEXT_B } from "@/app/_data/Intro";
 
@@ -16,7 +18,7 @@ async function typeText(
     for (const char of text) {
         if (char === "|") {
             onChar("\n\n");
-            await new Promise((resolve) => setTimeout(resolve, delay * 20));
+            await new Promise((resolve) => setTimeout(resolve, delay * 60));
             if (isCancelled()) return;
         } else {
             await new Promise((resolve) => setTimeout(resolve, delay));
@@ -34,7 +36,7 @@ export default function IntroTextText({ showTextB = false }: IntroTextProps) {
     useEffect(() => {
         let cancelled = false;
 
-        typeText(TEXT_A, 50, () => cancelled, (char) =>
+        typeText(TEXT_A, TEXT_DELAY, () => cancelled, (char) =>
             setRenderedText((prev) => prev + char)
         ).then(() => {
             if (!cancelled) setIsTextADone(true);
@@ -50,7 +52,7 @@ export default function IntroTextText({ showTextB = false }: IntroTextProps) {
 
         let cancelled = false;
 
-        typeText("\n\n" + TEXT_B, 50, () => cancelled, (char) =>
+        typeText("\n\n" + TEXT_B, TEXT_DELAY, () => cancelled, (char) =>
             setRenderedText((prev) => prev + char)
         );
 

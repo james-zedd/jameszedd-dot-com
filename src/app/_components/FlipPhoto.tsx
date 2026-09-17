@@ -41,6 +41,7 @@ export default function FlipPhoto({
           alt={backAlt}
           width={1000}
           height={1000}
+          loading="eager"
           className="absolute inset-0 h-full w-full rounded-full object-cover backface-hidden rotate-y-180"
         />
       </div>
