@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Ubuntu, Ubuntu_Mono, Merriweather } from "next/font/google";
+import { Ubuntu, Ubuntu_Mono, Merriweather, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./_components/Footer";
 
@@ -21,6 +21,12 @@ const merriweather = Merriweather({
   subsets: ["latin"],
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "500"],
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "James Zedd",
   description:
@@ -35,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${ubuntu.variable} ${ubuntuMono.variable} ${merriweather.variable} h-full antialiased`}
+      className={`${ubuntu.variable} ${ubuntuMono.variable} ${merriweather.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         {children}

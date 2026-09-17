@@ -64,15 +64,23 @@ export default function IntroTextText({ showTextB = false }: IntroTextProps) {
   const paragraphs = renderedText.split("\n\n");
 
   return (
-    <div className="intro-text">
-      {paragraphs.map((paragraph, i) => (
-        <p key={i}>
-          {paragraph}
-          {i === paragraphs.length - 1 && (
-            <span className="w-2 h-4 md:w-3 md:h-5 bg-white inline-block ml-1 animate-toggle-blink"></span>
-          )}
-        </p>
-      ))}
+    <div className="intro-terminal">
+      <div className="intro-terminal-header">
+        <span className="intro-terminal-dot intro-terminal-dot-red"></span>
+        <span className="intro-terminal-dot intro-terminal-dot-yellow"></span>
+        <span className="intro-terminal-dot intro-terminal-dot-green"></span>
+        <span className="intro-terminal-title">james@portfolio: ~</span>
+      </div>
+      <div className="intro-text">
+        {paragraphs.map((paragraph, i) => (
+          <p key={i}>
+            {paragraph}
+            {i === paragraphs.length - 1 && (
+              <span className="w-2 h-3 md:w-3 md:h-4 bg-white inline-block ml-1 animate-toggle-blink"></span>
+            )}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

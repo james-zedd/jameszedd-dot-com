@@ -6,6 +6,8 @@
   --font-ubuntu: "Ubuntu", sans-serif;
   --font-ubuntu-mono: "Ubuntu Mono", monospace;
   --font-merriweather: "Merriweather", serif;
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+  --font-terminal: var(--font-jetbrains-mono);
   --text-light: #b4b4b4;
 }
 
@@ -72,14 +74,67 @@ p {
   color: var(--text-light);
 }
 
+.intro-terminal {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  background: #111111;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.intro-terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  background: #1c1c1c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.intro-terminal-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.intro-terminal-dot-red {
+  background: #ff5f56;
+}
+
+.intro-terminal-dot-yellow {
+  background: #ffbd2e;
+}
+
+.intro-terminal-dot-green {
+  background: #27c93f;
+}
+
+.intro-terminal-title {
+  margin-left: 0.5rem;
+  font-family: var(--font-terminal);
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.intro-text {
+  padding: 1.25rem 1.5rem 1.5rem;
+  font-family: var(--font-terminal);
+}
+
 .intro-text p {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
 }
 
 .intro-text p + p {
   margin-top: 1rem;
+}
+
+.intro-text p:first-child::before {
+  content: "$ ";
+  color: #27c93f;
 }
 
 @media (min-width: 40rem) { /* 640px */
@@ -111,8 +166,8 @@ p {
   }
 
   .intro-text p {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
