@@ -10,6 +10,7 @@ type PortfolioCardProps = {
   linkTwoText?: string;
   linkOneIcon?: IconKey;
   linkTwoIcon?: IconKey;
+  isOddAndLast?: boolean;
 };
 
 function Icon({ type }: { type: IconKey }) {
@@ -39,9 +40,10 @@ export default function PortfolioCard({
   linkTwoText = "Live Site",
   linkOneIcon = "github",
   linkTwoIcon = "external",
+  isOddAndLast = false,
 }: PortfolioCardProps) {
   return (
-    <div className="flex flex-col rounded-lg bg-zinc-100 p-6 dark:bg-zinc-900">
+    <div className={`flex flex-col rounded-lg bg-zinc-100 p-6 dark:bg-zinc-800 ${isOddAndLast ? "md:col-span-2" : ""}`}>
       <div className="flex-1">
         <h3 className="text-xl font-medium">{name}</h3>
         <p className="mt-1 text-zinc-600 dark:text-zinc-400">{description}</p>

@@ -44,5 +44,11 @@ export const projects: Project[] = [
         technologies: ["React.js", "Tailwind CSS", "GitHub API"],
         linkOneUrl: "https://github.com/james-zedd/github-finder-2022",
         linkTwoUrl: "https://github-finder-2022-chi.vercel.app/",
-    }
+    },
+    {
+        name: "Shu Ha Ri Engine",
+        description: "A mobile learning/education application that embodies the Shu Ha Ri approach to learning. The application is open source and available on GitHub.",
+        technologies: ["React Native", "Expo", "JavaScript", "TypeScript"],
+        linkOneUrl: "https://github.com/james-zedd/shu-ha-ri--engine",
+    },
 ];
