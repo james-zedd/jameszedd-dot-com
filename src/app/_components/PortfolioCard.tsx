@@ -45,7 +45,7 @@ export default function PortfolioCard({
   return (
     <div className={`flex flex-col rounded-lg bg-zinc-100 p-6 dark:bg-zinc-800 ${isOddAndLast ? "md:col-span-2" : ""}`}>
       <div className="flex-1">
-        <h3 className="text-xl font-medium">{name}</h3>
+        <h2 className="text-xl font-medium">{name}</h2>
         <p className="mt-1 text-zinc-600 dark:text-zinc-400">{description}</p>
         <span className="inline-block mt-3 font-thin text-sm">Technologies Used:</span>
         <ul className="mt-3 flex flex-wrap gap-2">

@@ -39,16 +39,23 @@ export const projects: Project[] = [
         linkOneUrl: "https://github.com/james-zedd/cafi-student-portal--130245840986",
     },
     {
-        name: "Github Finder 2022",
-        description: "React App for Finding Github Users",
-        technologies: ["React.js", "Tailwind CSS", "GitHub API"],
-        linkOneUrl: "https://github.com/james-zedd/github-finder-2022",
-        linkTwoUrl: "https://github-finder-2022-chi.vercel.app/",
+        name: "Cedar Shopify Theme",
+        description: "Headless Shopify storefront built with Next.js, TypeScript, and Tailwind CSS. Uses the Storefront GraphQL API and hydrogen-react for collections, product pages, and cart-to-checkout. Tested with Vitest, React Testing Library and Playwright.",
+        technologies: ["GraphQL", "Shopify Storefront API", "Next.js", "TypeScript", "Vitest", "Playwright"],
+        linkOneUrl: "https://github.com/james-zedd/cedar-shopify-theme",
+        linkTwoUrl: "https://cedar-shopify-theme.vercel.app/"
     },
     {
         name: "Shu Ha Ri Engine",
         description: "A mobile learning/education application that embodies the Shu Ha Ri approach to learning. The application is open source and available on GitHub.",
         technologies: ["React Native", "Expo", "JavaScript", "TypeScript"],
         linkOneUrl: "https://github.com/james-zedd/shu-ha-ri--engine",
+    },
+    {
+        name: "Github Finder 2022",
+        description: "React App for Finding Github Users",
+        technologies: ["React.js", "Tailwind CSS", "GitHub API"],
+        linkOneUrl: "https://github.com/james-zedd/github-finder-2022",
+        linkTwoUrl: "https://github-finder-2022-chi.vercel.app/",
     },
 ];
