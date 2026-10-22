@@ -34,8 +34,8 @@ export const projects: Project[] = [
     },
     {
         name: "CAFI Student Portal Node JS Server",
-        description: "Node JS server for the CAFI Student Portal",
-        technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose"],
+        description: "Node.js REST API for the Chudokai Aikido Federation International. Built with Express.js and with CI/CD to Google Cloud Platform.",
+        technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose", "GitHub Actions"],
         linkOneUrl: "https://github.com/james-zedd/cafi-student-portal--130245840986",
     },
     {
